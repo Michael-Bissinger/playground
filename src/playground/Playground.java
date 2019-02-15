@@ -45,11 +45,13 @@ public class Playground extends Application {
         Line right = new Line(200,240,240,340);
         right.setStrokeWidth(5);
         
+        //Adding everything to the root-group
         root.getChildren().addAll(seesaw,cir,rec,left,right);
         
         
         Scene scene = new Scene(root, 400, 400);
         
+        // Show everything
         stage.setTitle("Playground");
         stage.setScene(scene);
         stage.show();
