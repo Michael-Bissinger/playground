@@ -40,9 +40,17 @@ public class Playground extends Application {
         rec.setStrokeWidth(5);
         rec.setFill(Color.YELLOWGREEN);
         
+        Line left = new Line(200,240,160,340);
+        left.setStrokeWidth(5);
+        Line right = new Line(200,240,240,340);
+        right.setStrokeWidth(5);
+        
+        root.getChildren().addAll(seesaw,cir,rec,left,right);
+        
         
         Scene scene = new Scene(root, 400, 400);
         
+        stage.setTitle("Playground");
         stage.setScene(scene);
         stage.show();
     }
