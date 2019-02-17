@@ -28,7 +28,7 @@ public class Playground extends Application {
     public void start(Stage stage) throws Exception {
         
         StackPane root = new StackPane();
-        root.getChildren().add(btn);
+        root.getChildren().add(blendModeObjects());
         
         Scene scene = new Scene(root, 300, 250);
         
