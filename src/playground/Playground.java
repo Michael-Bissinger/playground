@@ -8,7 +8,9 @@ package playground;
 
 import javafx.application.Application;
 import javafx.scene.Group;
+import javafx.scene.Node;
 import javafx.scene.Scene;
+import javafx.scene.effect.BlendMode;
 import javafx.scene.layout.StackPane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
@@ -37,8 +39,20 @@ public class Playground extends Application {
     }
     
     static Node blendModeObjects() {
+        Group g = new Group();
         
+        Circle c = new Circle(50,50,25);
+        c.setFill(Color.DARKCYAN);
+        c.setBlendMode(BlendMode.MULTIPLY);
+        
+        Rectangle r = new Rectangle(50,50,50,50);
+        r.setFill(Color.BLUEVIOLET);
+        
+        g.getChildren().addAll(r,c);
+        return g;
+                
     }
+    
     
     /**
      * @param args the command line arguments
