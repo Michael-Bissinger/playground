@@ -9,6 +9,7 @@ package playground;
 import javafx.application.Application;
 import javafx.scene.Group;
 import javafx.scene.Scene;
+import javafx.scene.layout.StackPane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
 import javafx.scene.shape.Line;
@@ -24,39 +25,13 @@ public class Playground extends Application {
     @Override
     public void start(Stage stage) throws Exception {
         
-        Group root = new Group();
+        StackPane root = new StackPane();
+        root.getChildren().add(btn);
         
-        Line seesaw = new Line(60,340,340,140); 
-        seesaw.setStroke(Color.BLACK);
-        seesaw.setStrokeWidth(15);
-        
-        Circle cir = new Circle(70,280,40);
-        cir.setStroke(Color.RED);
-        cir.setStrokeWidth(5);
-        cir.setFill(Color.ORANGE);
-        
-        Circle sun = new Circle(-50,-50,140);
-        //sun.setStroke(Color.YELLOW);
-        sun.setFill(Color.YELLOW);
-        
-        Rectangle rec = new Rectangle(240,90,80,70);
-        rec.setStroke(Color.GREEN);
-        rec.setStrokeWidth(5);
-        rec.setFill(Color.YELLOWGREEN);
-        
-        Line left = new Line(200,240,160,340);
-        left.setStrokeWidth(5);
-        Line right = new Line(200,240,240,340);
-        right.setStrokeWidth(5);
-        
-        //Adding everything to the root-group
-        root.getChildren().addAll(seesaw,cir,rec,left,right,sun);
-        
-        // Color at the end makes the background-color
-        Scene scene = new Scene(root, 400, 400, Color.SKYBLUE);
+        Scene scene = new Scene(root, 300, 250);
         
         // Show everything
-        stage.setTitle("Playground");
+        stage.setTitle("Blended Shapes");
         stage.setScene(scene);
         stage.show();
     }
