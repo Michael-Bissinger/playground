@@ -35,7 +35,11 @@ public class Playground extends Application {
         stage.setScene(scene);
         stage.show();
     }
-
+    
+    static Node blendModeObjects() {
+        
+    }
+    
     /**
      * @param args the command line arguments
      */
