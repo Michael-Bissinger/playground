@@ -43,11 +43,13 @@ public class Playground extends Application {
         
         Circle c = new Circle(50,50,25);
         c.setFill(Color.DARKCYAN);
-        c.setBlendMode(BlendMode.MULTIPLY);
+        c.setBlendMode(BlendMode.OVERLAY);
         
         Rectangle r = new Rectangle(50,50,50,50);
         r.setFill(Color.BLUEVIOLET);
         
+        
+        g.setBlendMode(BlendMode.SRC_ATOP);
         g.getChildren().addAll(r,c);
         return g;
                 
