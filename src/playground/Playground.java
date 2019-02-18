@@ -6,17 +6,19 @@
 package playground;
 
 
+import static java.awt.SystemColor.text;
 import javafx.application.Application;
 import javafx.scene.Group;
 import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.effect.BlendMode;
 import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.HBox;
 import javafx.scene.layout.StackPane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
-import javafx.scene.shape.Line;
 import javafx.scene.shape.Rectangle;
+import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
 /**
@@ -43,6 +45,17 @@ public class Playground extends Application {
         //stage.setScene(scene); // Shows the scene with the blended objects
         stage.setScene(scene2);
         stage.show();
+    }
+    
+    public static HBox addHBox(String str) {
+        HBox hbox = new HBox();
+        Text text = new Text(str);
+        
+        hbox.setId("hbox");
+        text.setId("textstyle");
+        hbox.getChildren().add(text);
+        return hbox;
+        
     }
     
     static Node blendModeObjects() {
