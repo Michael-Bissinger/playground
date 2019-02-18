@@ -47,6 +47,8 @@ public class Playground extends Application {
         pane.setRight(addVBox("Right"));
         pane.setBottom(addHBox("Bottom"));
         
+        scene2.getStylesheets().add("playground/textStyles.css");
+        
         
         // What to show
         stage.setTitle("Adding text");
