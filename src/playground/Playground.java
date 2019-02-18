@@ -45,7 +45,7 @@ public class Playground extends Application {
         pane.setTop(addHBox("Top"));
         pane.setLeft(addVBox("Left"));
         pane.setRight(addVBox("Right"));
-        pane.setTop(addHBox("Bottom"));
+        pane.setBottom(addHBox("Bottom"));
         
         
         // What to show
@@ -66,7 +66,7 @@ public class Playground extends Application {
         
     }
     
-    public static VBox adVBox(String str) {
+    public static VBox addVBox(String str) {
         VBox vbox = new VBox();
         Text text = new Text();
         
