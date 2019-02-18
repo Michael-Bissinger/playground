@@ -15,6 +15,7 @@ import javafx.scene.effect.BlendMode;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.StackPane;
+import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
 import javafx.scene.shape.Rectangle;
@@ -55,6 +56,17 @@ public class Playground extends Application {
         text.setId("textstyle");
         hbox.getChildren().add(text);
         return hbox;
+        
+    }
+    
+    public static VBox adVBox(String str) {
+        VBox vbox = new VBox();
+        Text text = new Text();
+        
+        vbox.setId("vbox");
+        text.setId("textstyle");
+        vbox.getChildren().add(text);
+        return vbox;
         
     }
     
