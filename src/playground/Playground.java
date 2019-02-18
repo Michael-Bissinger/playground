@@ -11,6 +11,7 @@ import javafx.scene.Group;
 import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.effect.BlendMode;
+import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.StackPane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
@@ -30,11 +31,16 @@ public class Playground extends Application {
         StackPane root = new StackPane();
         root.getChildren().add(blendModeObjects());
         
+        BorderPane pane = new BorderPae();
+        
+        
         Scene scene = new Scene(root, 300, 250);
+        Scene scene2 = new Scene(pane, 300, 250);
+        
         
         // Show everything
         stage.setTitle("Blended Shapes");
-        stage.setScene(scene);
+        stage.setScene(scene2);
         stage.show();
     }
     
