@@ -31,15 +31,16 @@ public class Playground extends Application {
         StackPane root = new StackPane();
         root.getChildren().add(blendModeObjects());
         
-        BorderPane pane = new BorderPae();
+        BorderPane pane = new BorderPane();
         
         
         Scene scene = new Scene(root, 300, 250);
-        Scene scene2 = new Scene(pane, 300, 250);
+        Scene scene2 = new Scene(pane, 400, 450);
         
         
-        // Show everything
+        // What to show
         stage.setTitle("Blended Shapes");
+        //stage.setScene(scene); // Shows the scene with the blended objects
         stage.setScene(scene2);
         stage.show();
     }
