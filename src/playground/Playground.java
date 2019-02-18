@@ -41,8 +41,15 @@ public class Playground extends Application {
         Scene scene2 = new Scene(pane, 400, 450);
         
         
+        
+        pane.setTop(addHBox("Top"));
+        pane.setLeft(addVBox("Left"));
+        pane.setRight(addVBox("Right"));
+        pane.setTop(addHBox("Bottom"));
+        
+        
         // What to show
-        stage.setTitle("Blended Shapes");
+        stage.setTitle("Adding text");
         //stage.setScene(scene); // Shows the scene with the blended objects
         stage.setScene(scene2);
         stage.show();
@@ -67,6 +74,7 @@ public class Playground extends Application {
         text.setId("textstyle");
         vbox.getChildren().add(text);
         return vbox;
+        
         
     }
     
