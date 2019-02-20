@@ -10,6 +10,7 @@ import javafx.application.Application;
 import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.effect.DropShadow;
+import javafx.scene.effect.Reflection;
 import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
@@ -34,8 +35,8 @@ public class Playground extends Application {
         //Text r = new Text("Reflexion");
         //Text d = new Text("Drop Shadow");
         
-        root.getChildren().addAll(p,r,d);
-        
+        //root.getChildren().addAll(p,r,d);
+        root.getChildren().addAll(reflection(), dropShadow());
         
         
         Scene scene = new Scene(root, 300, 250);
@@ -55,7 +56,7 @@ public class Playground extends Application {
         t.setFill(Color.FIREBRICK);
         t.setText("Dropshadow Effect");
         t.setFont(Font.font("null", FontWeight.BOLD, 32));
-        DropShadow ds = new Dropshadow();
+        DropShadow ds = new DropShadow();
         ds.setOffsetX(3.0);
         ds.setOffsetY(3.0);
         ds.setColor(Color.GRAY);
@@ -64,7 +65,25 @@ public class Playground extends Application {
         return t;
         
     }
+
+        static Node reflection() {
+        Text t = new Text();
+        t.setCache(true);
+        t.setFill(Color.FIREBRICK);
+        t.setText("Reflexion");
+        t.setFont(Font.font("null", FontWeight.BOLD, 32));
+        Reflection r = new Reflection();
+        r.setFraction(0.9);
+
+        t.setEffect(r);
+        t.setTranslateY(50);
+        return t;
+        
+    }
     
+    
+        
+        
     /**
      *
      */
