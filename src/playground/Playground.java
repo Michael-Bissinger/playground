@@ -8,7 +8,8 @@ package playground;
 
 import javafx.application.Application;
 import javafx.scene.Scene;
-import javafx.scene.layout.StackPane;
+import javafx.scene.layout.VBox;
+import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
 /**
@@ -20,15 +21,25 @@ public class Playground extends Application {
     @Override
     public void start(Stage stage) throws Exception {
         
-        StackPane root = new StackPane();
+        VBox root = new VBox(5);
+        root.setSpacing(20);
+        
+        Text p = new Text("LinkedIn");
+        Text r = new Text("Reflexion");
+        Text d = new Text("Drop Shadow");
+        
+        root.getChildren().addAll(p,r,d);
+        
+        
+        
         Scene scene = new Scene(root, 300, 250);
 
         
    
         // What to show
-        stage.setTitle("Adding text");
+        stage.setTitle("Text Effects");
         //stage.setScene(scene); // Shows the scene with the blended objects
-        stage.setScene(scene2);
+        stage.setScene(scene);
         stage.show();
     }
     
