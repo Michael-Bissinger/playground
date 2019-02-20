@@ -7,8 +7,13 @@ package playground;
 
 
 import javafx.application.Application;
+import javafx.scene.Node;
 import javafx.scene.Scene;
+import javafx.scene.effect.DropShadow;
 import javafx.scene.layout.VBox;
+import javafx.scene.paint.Color;
+import javafx.scene.text.Font;
+import javafx.scene.text.FontWeight;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
@@ -24,9 +29,10 @@ public class Playground extends Application {
         VBox root = new VBox(5);
         root.setSpacing(20);
         
-        Text p = new Text("LinkedIn");
-        Text r = new Text("Reflexion");
-        Text d = new Text("Drop Shadow");
+        //Texts
+        //Text p = new Text("LinkedIn");
+        //Text r = new Text("Reflexion");
+        //Text d = new Text("Drop Shadow");
         
         root.getChildren().addAll(p,r,d);
         
@@ -41,6 +47,22 @@ public class Playground extends Application {
         //stage.setScene(scene); // Shows the scene with the blended objects
         stage.setScene(scene);
         stage.show();
+    }
+    
+    static Node dropShadow() {
+        Text t = new Text();
+        t.setCache(true);
+        t.setFill(Color.FIREBRICK);
+        t.setText("Dropshadow Effect");
+        t.setFont(Font.font("null", FontWeight.BOLD, 32));
+        DropShadow ds = new Dropshadow();
+        ds.setOffsetX(3.0);
+        ds.setOffsetY(3.0);
+        ds.setColor(Color.GRAY);
+        t.setEffect(ds);
+        
+        return t;
+        
     }
     
     /**
